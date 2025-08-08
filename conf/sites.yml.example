@@ -16,6 +16,10 @@ sites:
       - app2.example.com
     webroot: /var/www/app2/public
 
+notifications:
+  slack_webhook: "https://hooks.slack.com/services/XXXX/YYYY/ZZZZ"
+  email: "ops@example.com"
+
 # Example DNS provider config (for wildcard certificates)
 dns_providers:
   - provider: cloudflare
