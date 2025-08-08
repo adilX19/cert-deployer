@@ -32,3 +32,6 @@ See conf/sites.yml.example and src/certdeployer.py for configuration.
 - Initially keep staging: true while testing to use Let's Encrypt staging.
 - After testing set staging: false and run sudo systemctl start certdeployer.service to obtain production certs.
 - For wildcard certs use DNS provider plugins and add DNS provider entries in the sites.yml.
+- Ensure the server can send mail locally (postfix or similar installed) for email notifications.
+- For Slack, create an Incoming Webhook in your workspace and place its URL in sites.yml.
+- Notifications trigger only when certificate acquisition/renewal fails.
