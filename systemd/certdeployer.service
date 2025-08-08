@@ -1,0 +1,11 @@
+[Unit]
+Description=Run CertDeployer
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/opt/certdeployer/src/certdeployer.py --config /etc/certdeployer/sites.yml
+
+[Install]
+WantedBy=multi-user.target

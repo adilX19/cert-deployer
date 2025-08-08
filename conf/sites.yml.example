@@ -1,0 +1,22 @@
+# /etc/certdeployer/sites.yml (copy this example and update)
+default_email: admin@example.com
+staging: true
+renewal_threshold_days: 30
+
+sites:
+  - name: app1
+    domains:
+      - app1.example.com
+      - www.app1.example.com
+    webroot: /var/www/app1/public
+    nginx_server_name: "app1.example.com www.app1.example.com"
+
+  - name: app2
+    domains:
+      - app2.example.com
+    webroot: /var/www/app2/public
+
+# Example DNS provider config (for wildcard certificates)
+dns_providers:
+  - provider: cloudflare
+    env_file: /etc/letsencrypt/cloudflare.env

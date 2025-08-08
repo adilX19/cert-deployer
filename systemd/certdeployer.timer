@@ -1,0 +1,10 @@
+[Unit]
+Description=Run CertDeployer daily
+
+[Timer]
+OnCalendar=daily
+Persistent=true
+RandomizedDelaySec=600
+
+[Install]
+WantedBy=timers.target
